@@ -8,6 +8,11 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.example.todolistpractice.ui.screens.Home.HomeScreen
+import com.example.todolistpractice.ui.screens.Task.TaskScreen
 import com.example.todolistpractice.ui.theme.ToDoListPracticeTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,5 +31,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun App() {
+    val navController = rememberNavController()
 
+    NavHost(navController, startDestination = "HomeScreen") {
+        composable("HomeScreen") { HomeScreen(navController) }
+        composable("TaskScreen") { TaskScreen() }
+    }
 }
