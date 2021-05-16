@@ -1,4 +1,6 @@
 package com.example.todolistpractice.ui.models
 
-class TaskViewModel {
+import androidx.lifecycle.ViewModel
+
+class TaskViewModel: ViewModel() {
 }

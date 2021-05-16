@@ -1,2 +1,2 @@
-package com.example.todolistpractice.ui.screens.TaskScreen
+package com.example.todolistpractice.ui.screens.Task
 

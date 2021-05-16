@@ -1,4 +1,3 @@
 package com.example.todolistpractice.ui.data
 
-class Task {
-}
+data class Task(val name: String)
